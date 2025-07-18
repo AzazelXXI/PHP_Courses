@@ -1,12 +1,14 @@
-<?php 
-$server_name = 'localhost';
+<?php
+
+$host = 'localhost';
 $username = 'root';
 $password = '';
-$dbname = 'moviesDB';
+$db_name = 'moviesDB';
 
-$conn = new mysqli($server_name, $username, $password, $dbname);
+$conn = new mysqli($host, $username, $password, $db_name);
 
 if ($conn->connect_error) {
-    die('Failed to connect' . $conn->connect_error);
+    die('Failed ' . $conn->connect_error);
 }
-// echo 'Connected!';
+
+// echo 'Success';
